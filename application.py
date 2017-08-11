@@ -3,15 +3,16 @@ from flask import Flask, request
 from youtube_relevance_model import yrm
 
 
-app = Flask(__name__)
+application = Flask(__name__)
+application.debug=True
 
 
-@app.route('/', methods=['GET'])
+@application.route('/', methods=['GET'])
 def run():
     return "Hello world", 200
 
 
-@app.route('/', methods=['POST'])
+@application.route('/', methods=['POST'])
 def hook():
     data = request.get_json()
     preds = yrm.predict(data)
@@ -20,4 +21,4 @@ def hook():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    application.run(host='0.0.0.0')
