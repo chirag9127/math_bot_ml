@@ -11,7 +11,7 @@ mock==2.0.0
 numpy==1.13.1
 pbr==3.1.1
 protobuf==3.3.0
-pygpu==0.6.9
+pygpu
 PyYAML==3.12
 scipy==0.19.1
 six==1.10.0
