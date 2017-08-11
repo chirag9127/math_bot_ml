@@ -3,7 +3,7 @@ from flask import Flask, request
 from youtube_relevance_model import yrm
 
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
 @app.route('/', methods=['GET'])
@@ -20,4 +20,4 @@ def hook():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    application.run(debug=True)
