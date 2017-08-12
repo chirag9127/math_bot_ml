@@ -14,8 +14,11 @@ MAX_SEQUENCE_LENGTH = 100
 class YoutubeRelevanceModel:
 
     def __init__(self):
-        self.tokenizer = pickle.load(open('tokenizer.p', 'rb'))
-        self.model = load_model('best_model.h5')
+        self.tokenizer = pickle.load(
+            open(os.path.dirname(os.path.abspath(__file__)) + '/tokenizer.p',
+                 'rb'))
+        self.model = load_model(
+            os.path.dirname(os.path.abspath(__file__)) + '/best_model.h5')
 
     def predict(self, data):
         query_sequences = self.tokenizer.texts_to_sequences(data['query'])
