@@ -12,7 +12,7 @@ dependencies:
 - conda-forge::itsdangerous=0.24=py36_1
 - conda-forge::jinja2=2.9.5=py36_0
 - conda-forge::keras=2.0.6=py36_0
-- conda-forge::libgfortran=3.0.0=0
+# - conda-forge::libgfortran=3.0.0=0
 - conda-forge::libgpuarray=0.6.9=0
 - conda-forge::mako=1.0.7=py36_0
 - conda-forge::markupsafe=1.0=py36_0
